@@ -199,7 +199,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return a string representation of the value for the property
 			 */
-			Value<string> getValueAsString(const char *propertyName);
+			Value<string> getValueAsString(const char *propertyName) const;
 
 			/**
 			 * Get a string representation of the value associated with the
@@ -209,7 +209,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return a string representation of the value for the property
 			 */
-			Value<string> getValueAsString(const string &propertyName);
+			Value<string> getValueAsString(const string &propertyName) const;
 
 			/**
 			 * Get a string representation of the value associated with the
@@ -219,7 +219,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return a string representation of the value for the property
 			 */
-			Value<string> getValueAsString(const string *propertyName);
+			Value<string> getValueAsString(const string *propertyName) const;
 
 			/**
 			 * Get a string representation of the value associated with the
@@ -230,7 +230,7 @@ namespace FiftyoneDegrees {
 			 * @return a string representation of the value for the property or
 			 * an empty string
 			 */
-			virtual Value<string> getValueAsString(int requiredPropertyIndex);
+			virtual Value<string> getValueAsString(int requiredPropertyIndex) const;
 
 			/**
 			 * Get a boolean representation of the value associated with the
@@ -239,7 +239,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return a boolean representation of the value for the property
 			 */
-			Value<bool> getValueAsBool(const char *propertyName);
+			Value<bool> getValueAsBool(const char *propertyName) const;
 
 			/**
 			 * Get a boolean representation of the value associated with the
@@ -248,7 +248,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return a boolean representation of the value for the property
 			 */
-			Value<bool> getValueAsBool(const string &propertyName);
+			Value<bool> getValueAsBool(const string &propertyName) const;
 
 			/**
 			 * Get a boolean representation of the value associated with the
@@ -257,7 +257,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return a boolean representation of the value for the property
 			 */
-			Value<bool> getValueAsBool(const string *propertyName);
+			Value<bool> getValueAsBool(const string *propertyName) const;
 
 			/**
 			 * Get a boolean representation of the value associated with the
@@ -266,7 +266,7 @@ namespace FiftyoneDegrees {
 			 * @param requiredPropertyIndex in the required properties
 			 * @return a boolean representation of the value for the property
 			 */
-			virtual Value<bool> getValueAsBool(int requiredPropertyIndex);
+			virtual Value<bool> getValueAsBool(int requiredPropertyIndex) const;
 
 			/**
 			 * Get an integer representation of the value associated with the
@@ -276,7 +276,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return an integer representation of the value for the property
 			 */
-			Value<int> getValueAsInteger(const char *propertyName);
+			Value<int> getValueAsInteger(const char *propertyName) const;
 
 			/**
 			 * Get an integer representation of the value associated with the
@@ -286,7 +286,7 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return an integer representation of the value for the property
 			 */
-			Value<int> getValueAsInteger(const string &propertyName);
+			Value<int> getValueAsInteger(const string &propertyName) const;
 
 			/**
 			 * Get an integer representation of the value associated with the
@@ -296,57 +296,57 @@ namespace FiftyoneDegrees {
 			 * @param propertyName string containing the property name
 			 * @return an integer representation of the value for the property
 			 */
-			Value<int> getValueAsInteger(const string *propertyName);
+			Value<int> getValueAsInteger(const string *propertyName) const;
 
 			/**
 			 * Get an integer representation of the value associated with the
-			 * required property index. If the property index is not valid then
-			 * 0 is returned. Using a property which returns non-numeric
-			 * characters will result in unexpected behavior.
-			 * @param requiredPropertyIndex in the required properties
-			 * @return an integer representation of the value for the property
-			 */
-			virtual Value<int> getValueAsInteger(int requiredPropertyIndex);
-
-			/**
-			 * Get a double representation of the value associated with the
-			 * required property name. If the property name is not valid then 0
-			 * is returned. Using a property which returns non-numeric
-			 * characters will result in unexpected behavior.
-			 * @param propertyName string containing the property name
-			 * @return a double representation of the value for the property
-			 */
-			Value<double> getValueAsDouble(const char *propertyName);
-
-			/**
-			 * Get a double representation of the value associated with the
-			 * required property name. If the property name is not valid then 0
-			 * is returned. Using a property which returns non-numeric
-			 * characters will result in unexpected behavior.
-			 * @param propertyName string containing the property name
-			 * @return a double representation of the value for the property
-			 */
-			Value<double> getValueAsDouble(const string &propertyName);
-
-			/**
-			 * Get a double representation of the value associated with the
-			 * required property name. If the property name is not valid then 0
-			 * is returned. Using a property which returns non-numeric
-			 * characters will result in unexpected behavior.
-			 * @param propertyName string containing the property name
-			 * @return a double representation of the value for the property
-			 */
-			Value<double> getValueAsDouble(const string *propertyName);
-
-			/**
-			 * Get a double representation of the value associated with the
 			 * required property index. If the property index is not valid then
 			 * 0 is returned. Using a property which returns non-numeric
 			 * characters will result in unexpected behavior.
 			 * @param requiredPropertyIndex in the required properties
+			 * @return an integer representation of the value for the property
+			 */
+			virtual Value<int> getValueAsInteger(int requiredPropertyIndex) const;
+
+			/**
+			 * Get a double representation of the value associated with the
+			 * required property name. If the property name is not valid then 0
+			 * is returned. Using a property which returns non-numeric
+			 * characters will result in unexpected behavior.
+			 * @param propertyName string containing the property name
 			 * @return a double representation of the value for the property
 			 */
-			virtual Value<double> getValueAsDouble(int requiredPropertyIndex);
+			Value<double> getValueAsDouble(const char *propertyName) const;
+
+			/**
+			 * Get a double representation of the value associated with the
+			 * required property name. If the property name is not valid then 0
+			 * is returned. Using a property which returns non-numeric
+			 * characters will result in unexpected behavior.
+			 * @param propertyName string containing the property name
+			 * @return a double representation of the value for the property
+			 */
+			Value<double> getValueAsDouble(const string &propertyName) const;
+
+			/**
+			 * Get a double representation of the value associated with the
+			 * required property name. If the property name is not valid then 0
+			 * is returned. Using a property which returns non-numeric
+			 * characters will result in unexpected behavior.
+			 * @param propertyName string containing the property name
+			 * @return a double representation of the value for the property
+			 */
+			Value<double> getValueAsDouble(const string *propertyName) const;
+
+			/**
+			 * Get a double representation of the value associated with the
+			 * required property index. If the property index is not valid then
+			 * 0 is returned. Using a property which returns non-numeric
+			 * characters will result in unexpected behavior.
+			 * @param requiredPropertyIndex in the required properties
+			 * @return a double representation of the value for the property
+			 */
+			virtual Value<double> getValueAsDouble(int requiredPropertyIndex) const;
 
 			/**
 			 * @}
@@ -361,7 +361,7 @@ namespace FiftyoneDegrees {
 			 * provided.
 			 * @return 0 based index or -1 if not found
 			 */
-			int getRequiredPropertyIndex(const char *propertyName);
+			int getRequiredPropertyIndex(const char *propertyName) const;
 
 			/**
 			 * Get the values for the index in required properties and add them
@@ -373,7 +373,7 @@ namespace FiftyoneDegrees {
 			 */
 			virtual void getValuesInternal(
 				int requiredPropertyIndex,
-				vector<string> &values) = 0;
+				vector<string> &values) const = 0;
 
             /**
              * Get whether or not there are valid values available for the
@@ -383,7 +383,7 @@ namespace FiftyoneDegrees {
              * @param requiredPropertyIndex index in the available properties
              * @return true if there are values available for the property
              */
-			virtual bool hasValuesInternal(int requiredPropertyIndex) = 0;
+			virtual bool hasValuesInternal(int requiredPropertyIndex) const = 0;
 
             /**
              * Get the message explaining the reason for missing values. This
@@ -395,7 +395,7 @@ namespace FiftyoneDegrees {
              * @return string explaining the reason in more detail
              */
 			virtual const char* getNoValueMessageInternal(
-				fiftyoneDegreesResultsNoValueReason reason) = 0;
+				fiftyoneDegreesResultsNoValueReason reason) const = 0;
 
             /**
              * Get the reason for values not being available. This is
@@ -406,7 +406,7 @@ namespace FiftyoneDegrees {
              * available
              */
 			virtual fiftyoneDegreesResultsNoValueReason getNoValueReasonInternal(
-				int requiredPropertyIndex) = 0;
+				int requiredPropertyIndex) const = 0;
 
 		private:
 			/** A shared pointer to the manager is passed around and referenced

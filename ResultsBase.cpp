@@ -72,7 +72,7 @@ string ResultsBase::getPropertyName(
 	return name;
 }
 
-FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(int requiredPropertyIndex) {
+FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(int requiredPropertyIndex) const{
 	Value<string> result;
 	if (hasValuesInternal(requiredPropertyIndex) == false) {
 		fiftyoneDegreesResultsNoValueReason reason =
@@ -103,19 +103,19 @@ FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(int require
 	return result;
 }
 
-FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(const char* propertyName) {
+FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(const char* propertyName)const {
 	return getValueAsString(getRequiredPropertyIndex(propertyName));
 }
 
-FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(const string &propertyName) {
+FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(const string &propertyName)const {
 	return getValueAsString(propertyName.c_str());
 }
 
-FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(const string *propertyName) {
+FiftyoneDegrees::Common::Value<string> ResultsBase::getValueAsString(const string *propertyName) const{
 	return getValueAsString(propertyName->c_str());
 }
 
-FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(int requiredPropertyIndex) {
+FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(int requiredPropertyIndex)const {
 	Value<bool> result;
 	if (hasValuesInternal(requiredPropertyIndex) == false) {
 		fiftyoneDegreesResultsNoValueReason reason =
@@ -139,19 +139,19 @@ FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(int requiredPro
 	return result;
 }
 
-FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(const char* propertyName) {
+FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(const char* propertyName)const {
 	return getValueAsBool(getRequiredPropertyIndex(propertyName));
 }
 
-FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(const string &propertyName) {
+FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(const string &propertyName)const {
 	return getValueAsBool(propertyName.c_str());
 }
 
-FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(const string *propertyName) {
+FiftyoneDegrees::Common::Value<bool> ResultsBase::getValueAsBool(const string *propertyName) const{
 	return getValueAsBool(propertyName->c_str());
 }
 
-FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(int requiredPropertyIndex) {
+FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(int requiredPropertyIndex)const {
 	Value<int> result;
 	if (hasValuesInternal(requiredPropertyIndex) == false) {
 		fiftyoneDegreesResultsNoValueReason reason =
@@ -175,19 +175,19 @@ FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(int requiredP
 	return result;
 }
 
-FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(const char* propertyName) {
+FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(const char* propertyName) const{
 	return getValueAsInteger(getRequiredPropertyIndex(propertyName));
 }
 
-FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(const string &propertyName) {
+FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(const string &propertyName) const{
 	return getValueAsInteger(propertyName.c_str());
 }
 
-FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(const string *propertyName) {
+FiftyoneDegrees::Common::Value<int> ResultsBase::getValueAsInteger(const string *propertyName) const{
 	return getValueAsInteger(propertyName->c_str());
 }
 
-FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(int requiredPropertyIndex) {
+FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(int requiredPropertyIndex) const{
 	Value<double> result;
 	if (hasValuesInternal(requiredPropertyIndex) == false) {
 		fiftyoneDegreesResultsNoValueReason reason =
@@ -211,15 +211,15 @@ FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(int require
 	return result;
 }
 
-FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(const char* propertyName) {
+FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(const char* propertyName) const{
 	return getValueAsDouble(getRequiredPropertyIndex(propertyName));
 }
 
-FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(const string &propertyName) {
+FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(const string &propertyName) const{
 	return getValueAsDouble(propertyName.c_str());
 }
 
-FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(const string *propertyName) {
+FiftyoneDegrees::Common::Value<double> ResultsBase::getValueAsDouble(const string *propertyName) const{
 	return getValueAsDouble(propertyName->c_str());
 }
 
@@ -257,7 +257,7 @@ FiftyoneDegrees::Common::Value<vector<string>> ResultsBase::getValues(
 }
 
 int ResultsBase::getRequiredPropertyIndex(
-	const char *propertyName) {
+	const char *propertyName) const {
 	return PropertiesGetRequiredPropertyIndexFromName(
 		available,
 		propertyName);
